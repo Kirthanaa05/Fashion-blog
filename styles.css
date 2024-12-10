@@ -1,0 +1,515 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background: #fff;
+
+}
+
+.navbar{
+  background-color: #000;
+}
+
+.navbar ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul li{
+  list-style-type: none;
+  height: 50px;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li:hover{
+  background-color: #7e7e7e;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.social-media, .search-icon{
+  display: flex;
+  align-items: center;
+}
+
+.search-icon i{
+  color: #fff;
+  margin-right: 2rem;
+}
+
+.search-icon i:hover{
+  cursor: pointer;
+}
+
+/* hero */
+
+.hero-text{
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text h1{
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.hero-text p{
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.hero-text .span-name{
+  background-color: #000;
+  color: #fff;
+  padding: 0.2rem 0.3rem;
+}
+
+/* main */
+.main-text{
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('images/fashion-img.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat:no-repeat;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  color: #fff;
+  padding: 0 1.5rem;
+}
+
+.main-text p{
+  font-size: 36px;
+  letter-spacing: 2px;
+}
+
+.main-text h1{
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.main-text-btn{
+  background-color: rgba(211, 211, 211, 0.664);
+  color: #000;
+  padding: 0.8rem 2rem;
+  border: none;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+.main-text-btn:hover{
+  cursor: pointer;
+  background-color: rgb(211, 211, 211);
+}
+
+/* grid */
+.container{
+  display: grid;
+  grid-template-areas: 
+   "main sidebar";
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ececec;
+}
+
+.post{
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content-header{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.content-header h2{
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+}
+
+.date{
+  color: #7e7e7e;
+}
+
+.main-content{
+  grid-area: main;
+}
+
+.blog-post p, .buttons button, .comment>p{
+  font-family: "Open Sans", sans-serif;
+}
+
+.blog-post img{
+  width:100%;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+}
+
+.blog-post .first-word{
+  font-family: "Open Sans", sans-serif;
+}
+  
+.blog-post p{
+  text-align: justify;
+  padding-bottom: 1rem;
+  font-size: 15px;
+}
+
+.like{
+  border: 1px solid #b3b3b3;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  font-size: 15px;
+  margin-right: 1rem;
+}
+
+.like:hover{
+  cursor: pointer;
+  background-color: #b3b3b3;
+}
+
+.comment-btn{
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  background-color: #000;
+  color: #fff;
+  text-transform: capitalize;
+  border: none;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  letter-spacing: -1px;
+}
+
+.count{
+  background-color: #fff;
+  color: #000;
+  padding: 0 0.5rem;
+  margin-left: 0.4rem;
+  font-weight: 300;
+}
+
+.comment-btn:hover{
+  background-color: #b3b3b3;
+  color: #000;
+  cursor: pointer;
+}
+
+.comment{
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .comment{
+  display: block;
+}
+
+/* sidebar */
+.sidebar{
+  grid-area: sidebar;
+  background-color: #ececec;
+}
+
+.profile{
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.profile h3{
+  text-transform: capitalize;
+  padding: 0.8rem 1rem;
+}
+
+.profile p{
+  padding: 0.8rem 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.popular-posts{
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+
+.sidebar-head{
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  text-transform: capitalize;
+}
+
+.popular-posts ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.popular-posts li{
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.popular-posts li:last-child{
+  border-bottom: none;
+}
+
+.advertisement{
+  background-color: #fff;
+  margin-bottom: 1rem;
+  height: 300px;
+}
+
+
+.ad{
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 230px;
+  margin: 0.5rem;
+  border-radius: 3px;
+}
+
+.ad p{
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+}
+
+.tags{
+  margin-bottom: 1rem;
+}
+
+.tags h3{
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  text-transform: capitalize;
+}
+
+.tag{
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.search-tags{
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  background-color: #ececec;
+  padding: 0 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.highlight{
+  background-color: #000;
+  color: #fff;
+  padding: 0.1rem 0.3rem;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.inspiration{
+  margin-bottom: 1rem;
+}
+.inspiration h3{
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  text-transform: capitalize;
+}
+
+.inspiration-images{
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem 0.6rem;
+  gap: 10px;
+}
+
+.inspiration-images img{
+  width: 200px;
+  border-radius: 5px;
+}
+
+.follow{
+  margin-bottom: 1rem;
+}
+
+.follow h3{
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  text-transform: capitalize;
+}
+
+.follow-social{
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+}
+.follow-social i{
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.follow-social i:hover{
+  color: #ccc;
+  cursor: pointer;
+}
+.subscribe p, .subscribe input, .sub-btn{
+  font-family: "Open Sans", sans-serif;
+}
+
+.subscribe-content{
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+}
+
+.subscribe-content input{
+  width: 400px;
+  margin: 1rem 0;
+  padding: 0.5rem 0.3rem;
+}
+
+.sub-btn{
+  width: 400px;
+  border: none;
+  color: #fff;
+  background-color: orangered;
+  padding: 0.5rem 0.3rem;
+  text-transform: capitalize;
+}
+
+.sub-btn:hover{
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+/* footer */
+footer{
+  background-color: #616161;
+  padding: 2rem;
+}
+
+.top-btn{
+  background-color: #000;
+  padding: 0.8rem 1rem;
+  text-transform: capitalize;
+  border: none;
+}
+
+.top-btn a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.top-btn:hover{
+  background-color: #b3b3b3;
+  cursor: pointer;
+}
+
+.copyrights{
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.top-btn a{
+  font-family: "Open Sans", sans-serif;
+}
+
+.myblogs{
+  font-family: "Open Sans", sans-serif;
+  text-decoration: underline;
+}
+
+.myblogs:hover{
+  cursor: pointer;
+}
+
+/* media query */
+@media(max-width: 578px){
+  .navbar ul li{
+    padding: 0 0.5rem;
+  }
+  .search-icon i{
+    margin-right: 0.5rem;
+  }
+  .hero-text{
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+  .hero-text h1{
+    font-size: 36px;
+  }
+  .hero-text p{
+    margin-top: 1rem;
+    font-size: 12px;
+  }
+  .main-text{
+    background-position: 0%;
+  }
+  .main-text h1{
+    font-size: 3rem;
+  }
+  .main-text-btn{
+    font-size: 1rem;
+  }
+  .container{
+    grid-template-areas: 
+    "main"
+    "sidebar";
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  .inspiration-images{
+    padding: 0.5rem 0.7rem;
+    gap: 15px;
+  }
+  .inspiration-images img{
+    width: 130px;
+  }
+  .subscribe-content input{
+    width: 100%;
+  }
+  .sub-btn{
+    width: 100%;
+  }
+}
