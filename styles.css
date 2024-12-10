@@ -361,7 +361,7 @@ input[type="checkbox"]:checked ~ .comment{
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
-  padding: 0.2rem 0.6rem;
+  padding: 0.5rem 0.6rem;
   gap: 10px;
 }
 
@@ -501,10 +501,9 @@ footer{
   }
   .inspiration-images{
     padding: 0.5rem 0.7rem;
-    gap: 15px;
   }
   .inspiration-images img{
-    width: 130px;
+    width: 100%;
   }
   .subscribe-content input{
     width: 100%;
